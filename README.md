@@ -11,19 +11,34 @@ Este projeto é uma aplicação Python que converte texto em fala utilizando a b
 
 1. Clone o repositório:
    ```bash
-   git clone <URL_DO_REPOSITORIO>
-   cd <NOME_DO_DIRETORIO>
+   git clone https://github.com/ecodelearn/ia_audio_kokoro.git
+   cd ia_audio_kokoro
    ```
 
-2. Crie um ambiente virtual usando UV:
+2. Instale o UV (escolha uma das opções abaixo):
+
+   - Usando pipx:
+     ```bash
+     pipx install uv
+     ```
+   - Usando pip:
+     ```bash
+     pip install uv
+     ```
+   - Usando Homebrew (macOS/Linux):
+     ```bash
+     brew install uv
+     ```
+
+3. Crie e ative o ambiente virtual com UV:
    ```bash
-   uv create venv
-   uv activate venv
+   uv venv
+   source .venv/bin/activate
    ```
 
-3. Instale as dependências:
+4. Instale as dependências:
    ```bash
-   uv sync
+   uv pip install -r requirements.txt
    ```
 
 ## Uso
@@ -43,56 +58,4 @@ Sinta-se à vontade para contribuir com melhorias e correções. Faça um fork d
 ## Licença
 
 Este projeto está licenciado sob a MIT License.
-
-Este projeto é uma aplicação Python que converte texto em fala utilizando a biblioteca Kokoro.
-
-## Funcionalidades
-
-- Conversão de texto em fala com diferentes vozes.
-- Geração de arquivos de áudio a partir do texto fornecido.
-
-## Instalação
-
-1. Clone o repositório:
-   ```bash
-   git clone <URL_DO_REPOSITORIO>
-   cd <NOME_DO_DIRETORIO>
-   ```
-
-2. Instale as dependências:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-## Uso
-
-Para usar a função de conversão de texto em fala, você pode chamar a função `text_to_speech`:
-
-```python
-from kokoro import KPipeline
-
-text_to_speech("Seu texto aqui", "voz_desejada", "caminho/do/audio.wav")
-```
-
-## Contribuição
-
-Sinta-se à vontade para contribuir com melhorias e correções. Faça um fork do repositório e envie um pull request.
-
-## Licença
-
-Este projeto está licenciado sob a MIT License.
-## Instalação via UV
-
-1. Instale o UV:
-   
-
-## Instalação via UV
-
-1. Instale o UV:
-   
-
-## Instalação via UV
-
-1. Instale o UV:
-   
 
