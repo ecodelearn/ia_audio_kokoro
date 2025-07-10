@@ -21,15 +21,20 @@ def text_to_speech(text, voice, audio_path):
         audio_chunks.append(audio)
 
     audio = np.concatenate(audio_chunks)
-    path_audio = path_audios / f'{audio_path}.wav'
+    path_audio = path_audios / f'{audio_path}.mp3'
     sf.write(path_audio, audio, 24000)
 
 if __name__ == '__main__':
     
     text = '''
-Olá, Professor Sandeco!
-Soubemos que o senhor está em recuperação. Queria apenas mandar uma mensagem rápida para desejar melhoras e dizer para o senhor não se preocupar com nada das aulas. Foque em descansar e se sentir bem logo! Estamos na torcida pela sua saúde.
-Abraço e se cuide!
+Olá, Tiago! Aqui é o Daniel. 
+
+Descobri seu Audio Kokoro no GitHub e fiquei fascinado pela “alma sonora” que você capturou. Para dar ainda mais vida ao projeto, vou preparar a partitura textual — ou seja, um README.md detalhado — que oriente futuros colaboradores sobre instalação, uso e propósito do Kokoro.
+
+Em breve você verá um pull request meu com essa adição. Espero que esse README faça o fluxo de contribuição soar tão bem quanto a trilha que você criou. 
+
+Um grande abraço e até já no PR!
+— Daniel
 '''
     for v in voices:
         text_to_speech(text, v, v)
